@@ -24,9 +24,9 @@ def LLM_interation(
                 temperature = 0.7
             )
 
-def main():
+def main(user_input=None):
     #Define system message
-    sysetem_message = (
+    system_message = (
                 "The user name of this function is Ayumu Yamamoto but I prefer to be called Joey. I am doing a project on carbon footprints from different cars and I want you to be my assistant in this project. "
                 "I want to gather information about carbon emission of different car brands and car models. "
                 "Whenever I ask you any question about carbon emission of different models, keep you answers concise and precise. "
@@ -34,16 +34,20 @@ def main():
             )
     
     while True:
-        user_input = input("User: " )
+        
+        if user_input == None:
+            user_input = input("User: " )
+
         if user_input.lower() in ['exit', 'bye', 'end']:
             print("Exiting the chat boat")
             break
 
         message = LLM_interation(
                         user_input = user_input, 
-                        system_message = sysetem_message
+                        system_message = system_message
                     )
         print("Model response:", message.choices[0].message.content)
+        return message.choices[0].message.content
 
 if __name__ == "__main__":
     main()

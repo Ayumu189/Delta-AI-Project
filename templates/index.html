@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarbonBot - Emission Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CarbonBot</h1>
+            <p>Consult our AI-powered assistant to understand the carbon emissions of different car models.</p>
+        </header>
+
+        <main>
+            <div class="chat-box">
+                <textarea id="user-input" placeholder="Enter car model details here..."></textarea>
+                <div id="model-response">Response from the AI model will appear here. {{ response }}</div>
+                <button id="submit-btn">Submit</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
