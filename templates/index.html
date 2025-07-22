@@ -15,9 +15,15 @@
 
         <main>
             <div class="chat-box">
-                <textarea id="user-input" placeholder="Enter car model details here..."></textarea>
-                <div id="model-response">Response from the AI model will appear here. {{ response }}</div>
-                <button id="submit-btn">Submit</button>
+                <form method="POST" action="/">
+                    <textarea id="user-input" name="user_input" placeholder="Enter car model details here..."></textarea>
+                    <button type="submit" id="submit-btn">Submit</button>
+                </form>
+                <div id="model-response">
+            
+                    {{ response|safe }}
+                    
+                </div>
             </div>
         </main>
     </div>

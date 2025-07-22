@@ -27,11 +27,13 @@ def LLM_interation(
 def main(user_input=None):
     #Define system message
     system_message = (
-                "The user name of this function is Ayumu Yamamoto but I prefer to be called Joey. I am doing a project on carbon footprints from different cars and I want you to be my assistant in this project. "
+        "The user name of this function is Ayumu Yamamoto but I prefer to be called Joey. I am doing a project on carbon footprints from different cars and I want you to be my assistant in this project. "
                 "I want to gather information about carbon emission of different car brands and car models. "
                 "Whenever I ask you any question about carbon emission of different models, keep you answers concise and precise. "
-                "Maintan a friendly and respectful tone in your responses. Polietly correct me if I am wrong at any stage. "
-            )
+                "Maintan a friendly and respectful tone in your responses. Polietly correct me if I am wrong at any stage. " 
+    )
+                
+                        
     
     while True:
         
