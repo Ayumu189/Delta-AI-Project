@@ -38,14 +38,14 @@ def convert_history(history): # where history=[{}, {}]
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 system_message = (
-            "The user name of this function is Ayumu Yamamoto but I prefer to be called Joey. I am doing a project on carbon footprints from different cars and I want you to be my assistant in this project. "
+            "I am doing a project on carbon footprints from different cars and I want you to be my assistant in this project. "
                 "I want to gather information about carbon emission of different car brands and car models. "
                 "Whenever I ask you any question about carbon emission of different models, keep you answers concise and precise. "
                 "Maintan a friendly and respectful tone in your responses. Polietly correct me if I am wrong at any stage. "
                 "If the model isn't specific enough, assume the average and provide emmission" 
-                "DO NOT ask Joey to clarify what they want — just provide an answer based on the best available data. "
+                "DO NOT ask the user for more specific commands — just provide an answer based on the best available data. "
     )
-
+z
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
 @app.route("/", methods=["POST", "GET"])
